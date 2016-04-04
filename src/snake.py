@@ -113,7 +113,7 @@ def gerar_posicao():
 
 def mostrar_tela_inicial():
 	img = pygame.image.load('tela_inicial.png')
-	imgx = 170
+	imgx = 165
 	imgy = 100
 
 	while True:
