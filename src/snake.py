@@ -129,8 +129,15 @@ def mostrar_tela_inicial():
 def desenhar_pressionar_tecla():
 	pressionar_tecla = FONTE.render('Pressione uma tecla para jogar', True, BRANCO)
 	pressionar_tecla_rect = pressionar_tecla.get_rect()
-	pressionar_tecla_rect.topleft = (LARGURA_JANELA - 400, ALTURA_JANELA - 30)
+	pressionar_tecla_rect.center = (LARGURA_JANELA / 2, 350)
+
+	cred_fonte = pygame.font.Font('dlxfont.ttf', 15)
+	cred = FONTE.render('2016 - Cristian Henrique', True, BRANCO)
+	cred_rect = cred.get_rect()
+	cred_rect.center = (LARGURA_JANELA / 2, 400)
+
 	EXIBICAO.blit(pressionar_tecla, pressionar_tecla_rect)
+	EXIBICAO.blit(cred, cred_rect)
 
 def tecla_pressionada():
 	if len(pygame.event.get(QUIT)) > 0:
@@ -149,13 +156,7 @@ def mostrar_tela_fim_de_jogo():
 	exib_rect = exib.get_rect()
 	exib_rect.midtop = (LARGURA_JANELA / 2, 10)
 
-	cred_fonte = pygame.font.Font('dlxfont.ttf', 15)
-	cred = cred_fonte.render('2016 - Cristian Henrique', True, BRANCO)
-	cred_rect = cred.get_rect()
-	cred_rect.center = (LARGURA_JANELA / 2, ALTURA_JANELA / 2)
-
 	EXIBICAO.blit(exib, exib_rect)
-	EXIBICAO.blit(cred, cred_rect)
 	desenhar_pressionar_tecla()
 	pygame.display.update()
 	pygame.time.wait(500)
