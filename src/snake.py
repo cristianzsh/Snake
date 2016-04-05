@@ -130,8 +130,7 @@ def desenhar_informacoes():
 	pressionar_tecla = FONTE.render('Pressione qualquer tecla para jogar', True, BRANCO)
 	pressionar_tecla_rect = pressionar_tecla.get_rect()
 	pressionar_tecla_rect.center = (LARGURA_JANELA / 2, 350)
-
-	cred_fonte = pygame.font.Font('dlxfont.ttf', 15)
+	
 	cred = FONTE.render('2016 - Cristian Henrique', True, BRANCO)
 	cred_rect = cred.get_rect()
 	cred_rect.center = (LARGURA_JANELA / 2, 400)
