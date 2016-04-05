@@ -117,7 +117,7 @@ def mostrar_tela_inicial():
 	imgy = 100
 
 	while True:
-		desenhar_pressionar_tecla()
+		desenhar_informacoes()
 
 		if tecla_pressionada():
 			pygame.event.get()
@@ -126,7 +126,7 @@ def mostrar_tela_inicial():
 		EXIBICAO.blit(img, (imgx, imgy))
 		FPS_CLOCK.tick(FPS)
 
-def desenhar_pressionar_tecla():
+def desenhar_informacoes():
 	pressionar_tecla = FONTE.render('Pressione uma tecla para jogar', True, BRANCO)
 	pressionar_tecla_rect = pressionar_tecla.get_rect()
 	pressionar_tecla_rect.center = (LARGURA_JANELA / 2, 350)
@@ -157,7 +157,7 @@ def mostrar_tela_fim_de_jogo():
 	exib_rect.midtop = (LARGURA_JANELA / 2, 10)
 
 	EXIBICAO.blit(exib, exib_rect)
-	desenhar_pressionar_tecla()
+	desenhar_informacoes()
 	pygame.display.update()
 	pygame.time.wait(500)
 	tecla_pressionada()
