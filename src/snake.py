@@ -127,7 +127,7 @@ def mostrar_tela_inicial():
 		FPS_CLOCK.tick(FPS)
 
 def desenhar_informacoes():
-	pressionar_tecla = FONTE.render('Pressione uma tecla para jogar', True, BRANCO)
+	pressionar_tecla = FONTE.render('Pressione qualquer tecla para jogar', True, BRANCO)
 	pressionar_tecla_rect = pressionar_tecla.get_rect()
 	pressionar_tecla_rect.center = (LARGURA_JANELA / 2, 350)
 
