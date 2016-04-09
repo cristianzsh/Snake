@@ -129,7 +129,7 @@ def mostrar_tela_inicial():
 def desenhar_informacoes():
 	pressionar_tecla = FONTE.render('Pressione qualquer tecla para jogar', True, BRANCO)
 	pressionar_tecla_rect = pressionar_tecla.get_rect()
-	pressionar_tecla_rect.center = (LARGURA_JANELA / 2, 350)
+	pressionar_tecla_rect.center = (LARGURA_JANELA / 2, 275)
 	
 	cred = FONTE.render('2016 - Cristian Henrique', True, BRANCO)
 	cred_rect = cred.get_rect()
