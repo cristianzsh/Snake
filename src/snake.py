@@ -130,12 +130,17 @@ def desenhar_informacoes():
 	pressionar_tecla = FONTE.render('Pressione qualquer tecla para jogar', True, BRANCO)
 	pressionar_tecla_rect = pressionar_tecla.get_rect()
 	pressionar_tecla_rect.center = (LARGURA_JANELA / 2, 275)
+
+	pressione_esc = FONTE.render('Pressione Esc para sair', True, BRANCO)
+	pressione_esc_rect = pressione_esc.get_rect()
+	pressione_esc_rect.center = (LARGURA_JANELA / 2, 300)
 	
 	cred = FONTE.render('2016 - Cristian Henrique', True, BRANCO)
 	cred_rect = cred.get_rect()
 	cred_rect.center = (LARGURA_JANELA / 2, 400)
 
 	EXIBICAO.blit(pressionar_tecla, pressionar_tecla_rect)
+	EXIBICAO.blit(pressione_esc, pressione_esc_rect)
 	EXIBICAO.blit(cred, cred_rect)
 
 def tecla_pressionada():
