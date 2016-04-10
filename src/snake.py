@@ -137,7 +137,7 @@ def desenhar_informacoes():
 	
 	cred = FONTE.render('2016 - Cristian Henrique', True, BRANCO)
 	cred_rect = cred.get_rect()
-	cred_rect.center = (LARGURA_JANELA / 2, 400)
+	cred_rect.center = (LARGURA_JANELA / 2, 430)
 
 	EXIBICAO.blit(pressionar_tecla, pressionar_tecla_rect)
 	EXIBICAO.blit(pressione_esc, pressione_esc_rect)
