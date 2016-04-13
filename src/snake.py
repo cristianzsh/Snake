@@ -63,6 +63,8 @@ def executar():
 				return
 
 		if coordenadas[CABECA]['x'] == comida['x'] and coordenadas[CABECA]['y'] == comida['y']:
+			som_comida = pygame.mixer.Sound('som_comida.wav')
+			som_comida.play()
 			comida = gerar_posicao()
 		else:
 			del coordenadas[-1]
