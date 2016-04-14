@@ -160,7 +160,7 @@ def mostrar_tela_fim_de_jogo():
 	fim_jogo_fonte = pygame.font.Font('dlxfont.ttf', 45)
 	exib = fim_jogo_fonte.render('Fim de jogo!', True, BRANCO)
 	exib_rect = exib.get_rect()
-	exib_rect.midtop = (LARGURA_JANELA / 2, 50)
+	exib_rect.midtop = (330, 50)
 
 	EXIBICAO.blit(exib, exib_rect)
 	desenhar_informacoes()
