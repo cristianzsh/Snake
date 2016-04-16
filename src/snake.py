@@ -129,21 +129,14 @@ def mostrar_tela_inicial():
 		FPS_CLOCK.tick(FPS)
 
 def desenhar_informacoes():
-	pressionar_tecla = FONTE.render('Pressione qualquer tecla para jogar', True, BRANCO)
-	pressionar_tecla_rect = pressionar_tecla.get_rect()
-	pressionar_tecla_rect.center = (LARGURA_JANELA / 2, 275)
+	desenhar_texto('Pressione qualquer tecla para jogar', LARGURA_JANELA / 2, 275)
 
-	pressione_esc = FONTE.render('Pressione Esc para sair', True, BRANCO)
-	pressione_esc_rect = pressione_esc.get_rect()
-	pressione_esc_rect.center = (LARGURA_JANELA / 2, 300)
-	
-	cred = FONTE.render('2016 - Cristian Henrique', True, BRANCO)
-	cred_rect = cred.get_rect()
-	cred_rect.center = (LARGURA_JANELA / 2, 430)
+def desenhar_texto(texto, x, y):
+	texto_obj = FONTE.render(texto, True, BRANCO)
+	texto_rect = texto_obj.get_rect()
+	texto_rect.center = (x, y)
+	EXIBICAO.blit(texto_obj, texto_rect)
 
-	EXIBICAO.blit(pressionar_tecla, pressionar_tecla_rect)
-	EXIBICAO.blit(pressione_esc, pressione_esc_rect)
-	EXIBICAO.blit(cred, cred_rect)
 
 def tecla_pressionada():
 	if len(pygame.event.get(QUIT)) > 0:
