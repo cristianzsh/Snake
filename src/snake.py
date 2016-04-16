@@ -131,6 +131,7 @@ def mostrar_tela_inicial():
 def desenhar_informacoes():
 	desenhar_texto('Pressione qualquer tecla para jogar', LARGURA_JANELA / 2, 275)
 	desenhar_texto('Pressione Esc para sair', LARGURA_JANELA / 2, 300)
+	desenhar_texto('2016 - Cristian Henrique', LARGURA_JANELA / 2, 430)
 
 def desenhar_texto(texto, x, y):
 	texto_obj = FONTE.render(texto, True, BRANCO)
